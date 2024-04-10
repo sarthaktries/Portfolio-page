@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
 
+    <!-- Awesome Icons -->
     <script src="https://kit.fontawesome.com/12ba6df664.js" crossorigin="anonymous"></script>
     
+    <!-- Title Bar -->
     <title>Sarthak Gupta</title>
+    <link rel="icon" href="assets/My Picture 2.jpg" type="image/x-icon">
 </head>
-
 <style>
-    /* 1. Use a more-intuitive box-sizing model. */
+    /* 1. Use a more-intuitive box-sizing model */
     *, *::before, *::after {
     box-sizing: border-box;
     }
@@ -52,7 +55,13 @@
     isolation: isolate;
     }
 
-    /* 9. Content Structure */
+    /* 9. Hyperlink Reset */
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* 10. Content Structure */
     .parent {
         display: flex;
         justify-content: center;
@@ -61,12 +70,15 @@
         color: white;
         margin: 30px 160px 30px 160px;
         height: 50vw;
-        
-    }
 
-    a {
-        text-decoration: none;
-        color: white;
+        @media (max-width: 1200px) {
+            margin: 0px;
+            height: 130vh;
+        }
+
+        @media (max-width: 1000px) {
+            
+        }
     }
 
     .upper{
@@ -76,6 +88,13 @@
         flex-direction: row;
         height: 70%;
         width: 100%;
+        background-color: aquamarine;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            justify-content: center;
+            height: 70%;
+        }
     }
 
     .mypanel {
@@ -86,6 +105,12 @@
         height: 100%;
         width: 75%;
         padding: 15px 10px 10px 15px;
+
+        @media (max-width: 1200px) {
+            height: 60%;
+            width: 100%;
+            padding: 1vh 1vw 1vh 1vw;
+        }
     }
     
     .mypanelchild {
@@ -102,19 +127,36 @@
 
     .potrait {
         width: 25%;
-        border-radius: 100%;
+        border-top-left-radius: 67%;
+        border-top-right-radius: 54%;
+        border-bottom-right-radius: 73%;
+        border-bottom-left-radius: 65%;
 
+        @media (max-width: 1200px) {
+            width: 21%;
+        }
+
+        @media (max-width: 950px) {
+            width: 25%;
+        }
     }
 
     h1 {
         font-family: "Tilt Neon", sans-serif;
         font-size: 2.8vw;
-        
+
+        @media (max-width: 1100px) {
+            font-size: 3vw;
+        }
     }
 
     p {
         font-family: "Tilt Neon", sans-serif;
         font-size: 1vw;
+
+        @media (max-width: 1100px) {
+            font-size: 1.5vw;
+        }
     }
 
     .linkpanel {
@@ -125,6 +167,14 @@
         width: 25%;
         height: 100%;
         padding: 15px 15px 10px 10px;
+        background-color: blue;
+
+        @media (max-width: 1200px) {
+            flex-direction: row;
+            width: 100%;
+            height: 40%;
+            padding: 1vh 1vw 1vh 1vw;
+        }
     }
 
     .upperresume {
@@ -138,28 +188,43 @@
         border-radius: 25px;
         margin-bottom: 10px;
         background-color: rgb(138,13,29);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-out;
+
+        @media (max-width: 1200px) {
+            width: 50%;
+            height: 100%;
+            margin: 0;
+            margin-right: 0.5vw;
+        }
     }
 
     .upperresume:hover {
-        animation: resume 0.5s ease-in-out;
+        animation: resume 0.5s ease-out;
         background-color: white;
         color: rgb(138,13,29);
         font-size: 9vw;
-        
+        box-shadow: 0px 0px 10px white;
     }
 
     @keyframes resume {
         0% {
             background-color: rgb(138,13,29);
             font-size: 7vw;
+            box-shadow: 0px 0px 0px rgb(138,13,29);
         }
 
         100% {
             background-color: white;
             color: rgb(138,13,29);
             font-size: 9vw;
+            box-shadow: 0px 0px 10px white;
         }
+    }
+
+    .resumetext {
+        font-size: 1.5vw; 
+        margin-top: 5px; 
+        font-weight: 800;
     }
 
     .upperlinkedin {
@@ -173,27 +238,46 @@
         margin-top: 10px;
         font-size: 7vw;
         background-color: rgb(29,59,88);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-out;
+
+        @media (max-width: 1200px) {
+            width: 50%;
+            height: 100%;
+            margin: 0;
+            margin-left: 0.5vw;
+        }
     }
 
     .upperlinkedin:hover {
-        animation: linkedin 0.5s ease-in-out;
+        animation: linkedin 0.5s ease-out;
         background-color: white;
         color: rgb(29,59,88);
         font-size: 9vw;
-        
+        box-shadow: 0px 0px 10px white;
     }
 
     @keyframes linkedin {
         0% {
             background-color: rgb(29,59,88);
             font-size: 7vw;
+            box-shadow: 0px 0px 00px rgb(29,59,88);
         }
 
         100% {
             background-color: white;
             color: rgb(29,59,88);
             font-size: 9vw;
+            box-shadow: 0px 0px 10px white;
+        }
+    }
+
+    .linkedintext {
+        font-size: 1.5vw; 
+        margin-top: -5px; 
+        font-weight: 800;
+
+        @media (max-width: 1200px) {
+            margin: 0;
         }
     }
     
@@ -205,6 +289,11 @@
         height: 30%;
         width: 100%;
         padding: 10px 15px 15px 15px;
+        background-color: blueviolet;
+
+        @media (max-width: 1200px) {
+            padding: 1vh 1vw 1vh 1vw;
+        }
     }
 
     .lowergit {
@@ -223,26 +312,33 @@
         background-size: 100%;
         background-position-y: 70%;
         background-position-x: center;
-        transition: all 0.8s ease-in-out;
-        
-        
+        transition: all 0.5s ease-out;
+
+        @media (max-width: 1200px) {
+            margin: 0;
+            margin-right: 0.5vw;
+            background-size: 115%;
+        }
     }
 
     .lowergit:hover {
-        animation: gitin 0.8s ease-in-out;
+        animation: gitin 0.5s ease-out;
         padding-left: 100px;
+        box-shadow: 2px 2px 1px rgb(193, 190, 190);
+        
     }
 
     @keyframes gitin {
         0% {
             padding-left: 35px;
+            box-shadow: 2px 2px 1px rgb(0, 0, 0);
         }
 
         100% {
             padding-left: 100px;
+            box-shadow: 2px 2px 1px rgb(193, 190, 190);
         }
     }
-
 
     .lowertwitter {
         display: flex;
@@ -260,21 +356,30 @@
         background-size: 100%;
         background-position-y: 40%;
         background-position-x: center;
-        transition: all 0.8s ease-in-out;
+        transition: all 0.5s ease-out;
+
+        @media (max-width: 1200px) {
+            margin: 0;
+            margin-left: 0.5vw;
+            background-size: 115%;
+        }
     }
 
     .lowertwitter:hover {
-        animation: xin 0.8s ease-in-out;
+        animation: xin 0.5s ease-out;
         padding-left: 100px;
+        box-shadow: 2px 2px 1px rgb(193, 190, 190);
     }
 
     @keyframes xin {
         0% {
             padding-left: 35px;
+            box-shadow: 2px 2px 1px rgb(0, 0, 0);
         }
 
         100% {
             padding-left: 100px;
+            box-shadow: 2px 2px 1px rgb(193, 190, 190);
         }
     }
 
@@ -285,11 +390,11 @@
         opacity: 3%;
         z-index: 10;
         pointer-events: none;
-    } 
+    }
 </style>
-
 <body>
     <div class="fuzzy"></div>
+
     <div class="parent">
         <div class="upper">
             <div class="mypanel">
@@ -303,11 +408,11 @@
             <div class="linkpanel">
                 <a class="upperresume" href="https://1drv.ms/b/s!Aspc53DGzAPvny36DOVtVkEd0BLr?e=MUOxkX" target="_blank">
                     <i class="fa-solid fa-file-contract"></i>
-                    <p style="font-size: 20px; margin-top: 5px; font-weight: 800;">Resume</p>
+                    <p class="resumetext">Resume</p>
                 </a>
                 <a class="upperlinkedin" href="https://linkedin.com/in/sarthaktries" target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i>
-                    <p style="font-size: 20px; margin-top: -5px; font-weight: 800;">LinkedIn</p>
+                    <p class="linkedintext">LinkedIn</p>
                 </a>
             </div>
         </div>
