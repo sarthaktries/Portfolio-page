@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/12ba6df664.js" crossorigin="anonymous"></script>
+    
+    <title>Sarthak Gupta</title>
+</head>
+
+<style>
+    /* 1. Use a more-intuitive box-sizing model. */
+    *, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+    /* 2. Remove default margin */
+    * {
+    margin: 0;
+    }
+    
+    /* 3. Add accessible line-height 4. Improve text rendering */
+    body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: black;
+    }
+
+    /* 5. Improve media defaults */
+    img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    }
+
+    /* 6. Remove built-in form typography styles */
+    input, button, textarea, select {
+    font: inherit;
+    }
+
+    /* 7. Avoid text overflows */
+    p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    }
+
+    /* 8. Create a root stacking context */
+    #root, #__next {
+    isolation: isolate;
+    }
+
+    /* 9. Content Structure */
+    .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        margin: 30px 160px 30px 160px;
+        height: 50vw;
+        
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .upper{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        height: 70%;
+        width: 100%;
+    }
+
+    .mypanel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 75%;
+        padding: 15px 10px 10px 15px;
+    }
+    
+    .mypanelchild {
+        display: flex;
+        justify-content: end;
+        align-items: baseline;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: #412D5B;
+        border-radius: 25px;
+        padding: 3.5vw;
+    }
+
+    .potrait {
+        width: 25%;
+        border-radius: 100%;
+
+    }
+
+    h1 {
+        font-family: "Tilt Neon", sans-serif;
+        font-size: 2.8vw;
+        
+    }
+
+    p {
+        font-family: "Tilt Neon", sans-serif;
+        font-size: 1vw;
+    }
+
+    .linkpanel {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+        padding: 15px 15px 10px 10px;
+    }
+
+    .upperresume {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        font-size: 7vw;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        background-color: rgb(138,13,29);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .upperresume:hover {
+        animation: resume 0.5s ease-in-out;
+        background-color: white;
+        color: rgb(138,13,29);
+        font-size: 9vw;
+        
+    }
+
+    @keyframes resume {
+        0% {
+            background-color: rgb(138,13,29);
+            font-size: 7vw;
+        }
+
+        100% {
+            background-color: white;
+            color: rgb(138,13,29);
+            font-size: 9vw;
+        }
+    }
+
+    .upperlinkedin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        border-radius: 25px;
+        margin-top: 10px;
+        font-size: 7vw;
+        background-color: rgb(29,59,88);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .upperlinkedin:hover {
+        animation: linkedin 0.5s ease-in-out;
+        background-color: white;
+        color: rgb(29,59,88);
+        font-size: 9vw;
+        
+    }
+
+    @keyframes linkedin {
+        0% {
+            background-color: rgb(29,59,88);
+            font-size: 7vw;
+        }
+
+        100% {
+            background-color: white;
+            color: rgb(29,59,88);
+            font-size: 9vw;
+        }
+    }
+    
+    .lower {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        height: 30%;
+        width: 100%;
+        padding: 10px 15px 15px 15px;
+    }
+
+    .lowergit {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        border-radius: 25px;
+        margin-right: 10px;
+        padding-left: 35px;
+        background-image: url(assets/study.gif);
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: 100%;
+        background-position-y: 70%;
+        background-position-x: center;
+        transition: all 0.8s ease-in-out;
+        
+        
+    }
+
+    .lowergit:hover {
+        animation: gitin 0.8s ease-in-out;
+        padding-left: 100px;
+    }
+
+    @keyframes gitin {
+        0% {
+            padding-left: 35px;
+        }
+
+        100% {
+            padding-left: 100px;
+        }
+    }
+
+
+    .lowertwitter {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        border-radius: 25px;
+        margin-left: 10px;
+        padding-left: 35px;
+        background-image: url(assets/social.gif);
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: 100%;
+        background-position-y: 40%;
+        background-position-x: center;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .lowertwitter:hover {
+        animation: xin 0.8s ease-in-out;
+        padding-left: 100px;
+    }
+
+    @keyframes xin {
+        0% {
+            padding-left: 35px;
+        }
+
+        100% {
+            padding-left: 100px;
+        }
+    }
+
+    .fuzzy {
+        position: absolute;
+        inset: 0%;
+        background-image: url(assets/noise.gif);
+        opacity: 3%;
+        z-index: 10;
+        pointer-events: none;
+    } 
+</style>
+
+<body>
+    <div class="fuzzy"></div>
+    <div class="parent">
+        <div class="upper">
+            <div class="mypanel">
+                <div class="mypanelchild">
+                    <img src="assets/My Picture 2.jpg" alt="Sarthak" class="potrait">
+                    <h1>Hi, I'm Sarthak Gupta</h1>
+                    <p>MERN Developer | MySQL | Python Developer</p>
+                </div>
+            </div>
+
+            <div class="linkpanel">
+                <a class="upperresume" href="https://1drv.ms/b/s!Aspc53DGzAPvny36DOVtVkEd0BLr?e=MUOxkX" target="_blank">
+                    <i class="fa-solid fa-file-contract"></i>
+                    <p style="font-size: 20px; margin-top: 5px; font-weight: 800;">Resume</p>
+                </a>
+                <a class="upperlinkedin" href="https://linkedin.com/in/sarthaktries" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <p style="font-size: 20px; margin-top: -5px; font-weight: 800;">LinkedIn</p>
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <div class="lower">
+            <a class="lowergit" href="https://github.com/sarthaktries" target="_blank">
+                <i class="fa-brands fa-github" style="background-color:transparent; font-size: 5vw;"></i>
+                <h1>GitHub</h1>
+            </a>
+
+            <a class="lowertwitter" href="https://twitter.com/sarthaktries" target="_blank">
+                <i class="fa-brands fa-x-twitter" style="background-color:transparent; font-size: 6vw;"></i>
+                <h1>Twitter</h1>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
