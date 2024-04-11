@@ -76,8 +76,20 @@
             height: 130vh;
         }
 
-        @media (max-width: 1000px) {
-            
+        @media (max-width: 800px) {
+            height: 150vh;
+        }
+
+        @media (max-width: 500px) {
+            height: 110vh;
+        }
+
+        @media (max-width: 400px) {
+            height: 100vh;
+        }
+
+        @media (max-width: 400px) {
+            height: 90vh;
         }
     }
 
@@ -88,7 +100,6 @@
         flex-direction: row;
         height: 70%;
         width: 100%;
-        background-color: aquamarine;
 
         @media (max-width: 1200px) {
             flex-direction: column;
@@ -111,6 +122,14 @@
             width: 100%;
             padding: 1vh 1vw 1vh 1vw;
         }
+
+        @media (max-width: 800px) {
+            padding: 2vh 2vw 2vh 2vw;
+        }
+        
+        @media (max-width: 500px) {
+            padding: 2vh 2vw 1vh 2vw;
+        }
     }
     
     .mypanelchild {
@@ -123,6 +142,10 @@
         background-color: #412D5B;
         border-radius: 25px;
         padding: 3.5vw;
+
+        @media (max-width: 800px) {
+            padding: 6vw;
+        }
     }
 
     .potrait {
@@ -139,6 +162,10 @@
         @media (max-width: 950px) {
             width: 25%;
         }
+
+        @media (max-width: 800px) {
+            width: 38%;
+        }
     }
 
     h1 {
@@ -148,6 +175,10 @@
         @media (max-width: 1100px) {
             font-size: 3vw;
         }
+
+        @media (max-width: 800px) {
+            font-size: 5.5vw;
+        }
     }
 
     p {
@@ -156,6 +187,10 @@
 
         @media (max-width: 1100px) {
             font-size: 1.5vw;
+        }
+
+        @media (max-width: 800px) {
+            font-size: 2.5vw;
         }
     }
 
@@ -167,13 +202,20 @@
         width: 25%;
         height: 100%;
         padding: 15px 15px 10px 10px;
-        background-color: blue;
 
         @media (max-width: 1200px) {
             flex-direction: row;
             width: 100%;
             height: 40%;
             padding: 1vh 1vw 1vh 1vw;
+        }
+
+        @media (max-width: 800px) {
+            padding: 2vh 2vw 2vh 2vw;
+        }
+
+        @media (max-width: 500px) {
+            padding: 1vh 2vw 1vh 2vw;
         }
     }
 
@@ -196,6 +238,11 @@
             margin: 0;
             margin-right: 0.5vw;
         }
+
+        @media (max-width: 800px) {
+            margin-right: 1vw;
+            font-size: 14vw;
+        }
     }
 
     .upperresume:hover {
@@ -204,6 +251,13 @@
         color: rgb(138,13,29);
         font-size: 9vw;
         box-shadow: 0px 0px 10px white;
+
+        @media (max-width: 800px) {
+            animation: resume2 0.5s ease-out;
+            color: rgb(138,13,29);
+            font-size: 17vw;
+            box-shadow: 0px 0px 10px white;
+        }
     }
 
     @keyframes resume {
@@ -221,10 +275,33 @@
         }
     }
 
+    @keyframes resume2 {
+        0% {
+            background-color: rgb(138,13,29);
+            font-size: 14vw;
+            box-shadow: 0px 0px 0px rgb(138,13,29);
+        }
+
+        100% {
+            background-color: white;
+            color: rgb(138,13,29);
+            font-size: 17vw;
+            box-shadow: 0px 0px 10px white;
+        }
+    }
+
     .resumetext {
         font-size: 1.5vw; 
         margin-top: 5px; 
         font-weight: 800;
+        
+        @media (max-width: 800px) {
+            font-size: 3vw;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 4vw;
+        }
     }
 
     .upperlinkedin {
@@ -246,6 +323,11 @@
             margin: 0;
             margin-left: 0.5vw;
         }
+
+        @media (max-width: 800px) {
+            margin-left: 1vw;
+            font-size: 14vw;
+        }
     }
 
     .upperlinkedin:hover {
@@ -254,6 +336,13 @@
         color: rgb(29,59,88);
         font-size: 9vw;
         box-shadow: 0px 0px 10px white;
+
+        @media (max-width: 800px) {
+            animation: linkedin2 0.5s ease-out;
+            color: rgb(29,59,88);
+            font-size: 17vw;
+            box-shadow: 0px 0px 10px white;
+        }
     }
 
     @keyframes linkedin {
@@ -271,6 +360,21 @@
         }
     }
 
+    @keyframes linkedin2 {
+        0% {
+            background-color: rgb(29,59,88);
+            font-size: 14vw;
+            box-shadow: 0px 0px 00px rgb(29,59,88);
+        }
+
+        100% {
+            background-color: white;
+            color: rgb(29,59,88);
+            font-size: 17vw;
+            box-shadow: 0px 0px 10px white;
+        }
+    }
+
     .linkedintext {
         font-size: 1.5vw; 
         margin-top: -5px; 
@@ -278,6 +382,16 @@
 
         @media (max-width: 1200px) {
             margin: 0;
+        }
+
+        @media (max-width: 800px) {
+            margin-top: -5px;
+            font-size: 3vw;
+        }
+
+        @media (max-width: 500px) {
+            margin-top: -1px;
+            font-size: 4vw;
         }
     }
     
@@ -289,10 +403,17 @@
         height: 30%;
         width: 100%;
         padding: 10px 15px 15px 15px;
-        background-color: blueviolet;
 
         @media (max-width: 1200px) {
             padding: 1vh 1vw 1vh 1vw;
+        }
+
+        @media (max-width: 800px) {
+            padding: 2vh 2vw 2vh 2vw;
+        }
+
+        @media (max-width: 500px) {
+            padding: 1vh 2vw 1vh 2vw;
         }
     }
 
@@ -306,6 +427,7 @@
         border-radius: 25px;
         margin-right: 10px;
         padding-left: 35px;
+        font-size: 5vw;
         background-image: url(assets/study.gif);
         background-repeat: no-repeat;
         background-attachment: local;
@@ -317,7 +439,17 @@
         @media (max-width: 1200px) {
             margin: 0;
             margin-right: 0.5vw;
-            background-size: 115%;
+            background-size: 130%;
+        }
+
+        @media (max-width: 800px) {
+            margin-right: 1vw;
+            background-size: 200%;
+            font-size: 9vw;
+        }
+
+        @media (max-width: 500px) {
+            background-size: 250%;
         }
     }
 
@@ -350,6 +482,7 @@
         border-radius: 25px;
         margin-left: 10px;
         padding-left: 35px;
+        font-size: 5vw;
         background-image: url(assets/social.gif);
         background-repeat: no-repeat;
         background-attachment: local;
@@ -361,7 +494,17 @@
         @media (max-width: 1200px) {
             margin: 0;
             margin-left: 0.5vw;
-            background-size: 115%;
+            background-size: 130%;
+        }
+
+        @media (max-width: 800px) {
+            margin-right: 1vw;
+            background-size: 200%;
+            font-size: 9vw;
+        }
+
+        @media (max-width: 500px) {
+            background-size: 250%;
         }
     }
 
@@ -422,12 +565,12 @@
 
         <div class="lower">
             <a class="lowergit" href="https://github.com/sarthaktries" target="_blank">
-                <i class="fa-brands fa-github" style="background-color:transparent; font-size: 5vw;"></i>
+                <i class="fa-brands fa-github"></i>
                 <h1>GitHub</h1>
             </a>
 
             <a class="lowertwitter" href="https://twitter.com/sarthaktries" target="_blank">
-                <i class="fa-brands fa-x-twitter" style="background-color:transparent; font-size: 6vw;"></i>
+                <i class="fa-brands fa-x-twitter"></i>
                 <h1>Twitter</h1>
             </a>
         </div>
